@@ -1,4 +1,4 @@
 # FMCW-SAR-3D-FFT
-Codes to go with the paper: Fast-Fourier Time-Domain SAR Reconstruction for Millimeter-Wave FMCW 3-D Imaging
-The data can be downloaded from google drive using the following link: https://drive.google.com/file/d/1AnGdp6I1WtOdJQiCnRePAfU8fW8nTHk3/view?usp=sharing
-Extract the zip file into a folder titled "Imaging_raw_data" and place in the same path as the MATLAB codes.
+Codes to go with the paper: FMCW Inverse Circular Synthetic Aperture Radar Using a Fast Time-Domain Reconstruction
+Download files and unzip Data_and_NUFFT.zip file. Place the contents in the same folder as the codes and it should run right away.
+If NUFFT codes don't work follow instructions at https://finufft.readthedocs.io/en/latest/install.html and rebuild mex files locally.
