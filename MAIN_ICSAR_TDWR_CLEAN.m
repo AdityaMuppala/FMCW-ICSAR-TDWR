@@ -1,6 +1,6 @@
-%-- Code written by Aditya Varma Muppala for the paper titled: FMCW Inverse Circular Synthetic Aperture Radar
-%-- Using a Fast Time-Domain Reconstruction. Last edited on 06/18/2024. 
-%-- The data can be downloaded from google drive using the following link: https://drive.google.com/file/d/1AnGdp6I1WtOdJQiCnRePAfU8fW8nTHk3/view?usp=sharing
+%-- Code written by Aditya Varma Muppala for the paper titled: FMCW Inverse Circular Synthetic Aperture Radar Using a Fast Time-Domain Reconstruction
+%-- Last edited on 06/18/2024. 
+%-- The data and NUFFT codes are in the zipped file.
 %-- Extract the zip file and place files in the same path as the MATLAB codes.
  
 
