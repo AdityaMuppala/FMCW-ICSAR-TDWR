@@ -1,5 +1,5 @@
 %-- Code written by Aditya Varma Muppala for the paper titled: FMCW Inverse Circular Synthetic Aperture Radar Using a Fast Time-Domain Reconstruction
-%-- Last edited on 06/18/2024. 
+%-- Last edited on 07/30/2024. 
 %-- The data and NUFFT codes are in the zipped file.
 %-- Extract the zip file and place files in the same path as the MATLAB codes.
  
@@ -8,7 +8,7 @@ clc
 clear
 clear path
 
-path = 'NUFFT_code';
+path = 'Data_and_NUFFT';
 addpath(path)
 
 Rg = 0.92; % Array radius
@@ -28,7 +28,9 @@ kmin = 2*pi/lambda_max;    % Wavenumber at lowest frequency
 kmax = 2*pi/lambda_min;    % Wavenumber at highest frequency
 
 %-- Fast-Time domain parameters and arrays
-phip_deg = 52-(0:0.1:359.9); phip = deg2rad(phip_deg);
+rot = 22.5;
+
+phip_deg = rot+52-(0:0.1:359.9); phip = deg2rad(phip_deg);
 
 fs = 50*1e6;               %Sampling rate;
 T = 48*1e-6;               % Chirp duration in microseconds
@@ -154,7 +156,7 @@ fIm2 = abs(fhat_final)./max(abs(fhat_final(:)));
 
 % Plotting
 figure(1); clf
-surf(x2D*100,y2D*100,fIm1);
+fIm3 = surf(x2D*100,y2D*100,fIm1);
 shading interp;
 xlabel('X (cm)');
 ylabel('Y (cm)');
@@ -172,9 +174,10 @@ set(gca,'GridAlpha',1)
 set(gca,'GridLineStyle','--')
 set(gca,'fontname','ariel')
 set(gcf,'color','w');
+rotate(fIm3,[0 0 1],-rot*2)
 
 figure(2); clf
-surf(x2D*100,y2D*100,fIm2);
+fIm4 = surf(x2D*100,y2D*100,fIm2);
 shading interp;
 xlabel('X (cm)');
 ylabel('Y (cm)');
@@ -191,5 +194,6 @@ set(gca,'GridAlpha',1)
 set(gca,'GridLineStyle','--')
 set(gca,'fontname','ariel')
 set(gcf,'color','w');
+rotate(fIm4,[0 0 1],-rot*2)
 
 clear path
